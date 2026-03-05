@@ -40,8 +40,16 @@ export default function PartnerForm() {
     setStatus('submitting')
     setErrorMessage('')
 
+    const webhookUrl = process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL
+
+    if (!webhookUrl) {
+      setStatus('error')
+      setErrorMessage('Form configuration error. Please contact the administrator.')
+      return
+    }
+
     try {
-      const response = await fetch('/api/submit', {
+      const response = await fetch(webhookUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

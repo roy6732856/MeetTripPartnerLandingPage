@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-primary: #F4B34A;
+  --brand-secondary: #3A8288;
+  --brand-background: #FDF5E6;
+  --brand-dark: #1A1A1A;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}

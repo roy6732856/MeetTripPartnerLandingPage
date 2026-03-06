@@ -164,7 +164,7 @@ export default function PartnerForm() {
             <Label htmlFor="discountDetails">Discount / Offer Details</Label>
             <Textarea
               id="discountDetails"
-              placeholder="e.g., 10% off for groups of 4+"
+              placeholder="e.g., 10% off, free drink, special menu..."
               error={errors.discountDetails?.message}
               {...register('discountDetails')}
             />
